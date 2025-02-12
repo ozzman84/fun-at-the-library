@@ -23,7 +23,6 @@ function checkShelfIndex(shelf, title) {
 function checkoutBook(library, bookTitle, genre) {
   let index = checkShelfIndex(library.shelves[genre], bookTitle)
   if (index !== -1) {
-    // unshelfBook(bookTitle, library.shelves[genre]);
     library.shelves[genre].splice(index, 1);
     return `You have now checked out ${bookTitle} from the ${library.name}`
   }
